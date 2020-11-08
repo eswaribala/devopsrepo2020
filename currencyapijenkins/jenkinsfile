@@ -13,7 +13,7 @@ pipeline{
        steps{
        
           bat "mvn -f ./currencyapijenkins clean install -DskipTests"
-          bat "docker build -f currencyapijenkins/dockerfile -t currencyapijenkinsv1 ."
+          bat "docker build -f currencyapijenkins/dockerfile -t currencyapijenkinsv1 ./currencyapijenkins"
        
        }
    
