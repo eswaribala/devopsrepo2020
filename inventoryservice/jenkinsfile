@@ -13,6 +13,7 @@ pipeline{
        steps{
        
           bat "mvn -f ./inventoryservice clean install -DskipTests"
+          bat "docker build -f inventoryservice/dockerfile -t inventoryserviceapp ./inventoryservice"
                           
        }
    
