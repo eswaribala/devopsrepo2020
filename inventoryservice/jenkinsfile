@@ -14,7 +14,7 @@ pipeline{
        
           bat "mvn -f ./inventoryservice clean install -DskipTests"
           bat "docker build -f inventoryservice/dockerfile -t inventoryserviceapp ./inventoryservice"
-          bat "docker run -p 6060:6060 --name lti-c1 -d inventoryapp:latest"                                
+          bat "docker run -p 6060:6060 --name lti-c1 -d inventoryserviceapp:latest"                                
        }
    
    }
